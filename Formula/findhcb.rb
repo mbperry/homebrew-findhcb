@@ -1,17 +1,17 @@
 class Findhcb < Formula
   desc "Data-depth CUSUM control-limit calibration with web interface"
   homepage "https://github.com/mbperry/cB-chart-Control-Limit"
-  version "0.1.3"
+  version "0.1.7"
   license "MIT"
 
   on_macos do
     url "https://github.com/mbperry/cB-chart-Control-Limit/releases/download/v#{version}/findhcB-macos.zip"
-    sha256 "ffd6aebaf49f20d67e34568613c32c5fea7d0486a2405b3184bad24009a08fb7"
+    sha256 "fafb652dd9b8b19f12d22f2cf7eeaca22c3eb2bc28d496e32839e1346b5edf5a"
   end
 
   on_linux do
     url "https://github.com/mbperry/cB-chart-Control-Limit/releases/download/v#{version}/findhcB-linux-x86_64.zip"
-    sha256 "d51ef9aba3093c52c6796ee8a873a3d8f16b83eef3d6049447caa72948066d4c"
+    sha256 "7211f2d390ce4f467eeafe6e61444b41621c094ca6361ea39deedefc7816bd08"
   end
 
   depends_on "python@3.12"
