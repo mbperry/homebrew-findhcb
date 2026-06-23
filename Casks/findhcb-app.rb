@@ -1,6 +1,6 @@
 cask "findhcb-app" do
-  version "0.1.8"
-  sha256 "822a1c63a5a27b6b6d44a0bef4724b667b51eb8665fa08ab0e2c65bf8da59315"
+  version "0.1.9"
+  sha256 "a8052a70de24866fe51ad4f398192bd9e7e39c670cb56eb8e18c1ca2bea26029"
 
   url "https://github.com/mbperry/cB-chart-Control-Limit/releases/download/v#{version}/findhcB-macos.dmg"
   name "findhcB"
