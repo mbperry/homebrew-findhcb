@@ -17,11 +17,10 @@ class Findhcb < Formula
   depends_on "python@3.12"
 
   def install
-    # Release zips unpack into a top-level "findhcB" directory containing
-    # engine/ plus launchers we don't need (we ship our own brew-managed one).
-    bundle_root = Pathname.pwd / "findhcB"
-    libexec.install (bundle_root / "engine").children
-    libexec.install (bundle_root / "t20.txt") if (bundle_root / "t20.txt").exist?
+    # The zip's single top-level "findhcB/" directory is auto-stripped by brew,
+    # so we're already inside it. Just install engine/ contents + the sample.
+    libexec.install Dir["engine/*"]
+    libexec.install "t20.txt" if File.exist?("t20.txt")
 
     # Mark the engine binary executable just in case the zip didn't preserve it
     chmod 0755, libexec / "findhcB"
